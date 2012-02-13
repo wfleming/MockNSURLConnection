@@ -1,8 +1,8 @@
-= MockNSURLConnection
+# MockNSURLConnection
 
 MockNSURLConnection is a library for mocking web requests in ObjC projects. It works by swizzling instances of `MockNSURLConnection` in for instances of `NSURLConnection` whenever a `+[NSURLConnection alloc]` message is sent. In other words, this is a hack, and likely to be delicate (I've already found it can confuse ARC in some cases).
 
-== Use
+## Use
 
 ```objc
 #import "MockNSURLConnection.h"

@@ -15,6 +15,11 @@
 		BE45C6C414E8170700F8DD20 /* libMockNSURLConnection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE45C6AC14E8170700F8DD20 /* libMockNSURLConnection.a */; };
 		BE45C6CA14E8170700F8DD20 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE45C6C814E8170700F8DD20 /* InfoPlist.strings */; };
 		BE45C6CD14E8170700F8DD20 /* MockNSURLConnectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE45C6CC14E8170700F8DD20 /* MockNSURLConnectionTests.m */; };
+		BE45C6D814E819A600F8DD20 /* MockNSHTTPURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = BE45C6D614E819A600F8DD20 /* MockNSHTTPURLResponse.h */; };
+		BE45C6D914E819A600F8DD20 /* MockNSHTTPURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BE45C6D714E819A600F8DD20 /* MockNSHTTPURLResponse.m */; };
+		BE45C6DA14E89D8900F8DD20 /* MockNSURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = BE45C6B514E8170700F8DD20 /* MockNSURLConnection.m */; };
+		BE45C6DB14E89D8C00F8DD20 /* MockNSHTTPURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BE45C6D714E819A600F8DD20 /* MockNSHTTPURLResponse.m */; };
+		BE45C6DE14E89E0C00F8DD20 /* TestConnectionDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BE45C6DD14E89E0C00F8DD20 /* TestConnectionDelegate.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,16 +35,20 @@
 /* Begin PBXFileReference section */
 		BE45C6AC14E8170700F8DD20 /* libMockNSURLConnection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMockNSURLConnection.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE45C6AF14E8170700F8DD20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		BE45C6B314E8170700F8DD20 /* MockNSURLConnection-Prefix.pch */ = {isa = PBXFileReference; path = "MockNSURLConnection-Prefix.pch"; sourceTree = "<group>"; };
-		BE45C6B414E8170700F8DD20 /* MockNSURLConnection.h */ = {isa = PBXFileReference; path = MockNSURLConnection.h; sourceTree = "<group>"; };
+		BE45C6B314E8170700F8DD20 /* MockNSURLConnection-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MockNSURLConnection-Prefix.pch"; sourceTree = "<group>"; };
+		BE45C6B414E8170700F8DD20 /* MockNSURLConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockNSURLConnection.h; sourceTree = "<group>"; };
 		BE45C6B514E8170700F8DD20 /* MockNSURLConnection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockNSURLConnection.m; sourceTree = "<group>"; };
 		BE45C6BC14E8170700F8DD20 /* MockNSURLConnectionTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MockNSURLConnectionTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE45C6BD14E8170700F8DD20 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		BE45C6BF14E8170700F8DD20 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		BE45C6C714E8170700F8DD20 /* MockNSURLConnectionTests-Info.plist */ = {isa = PBXFileReference; path = "MockNSURLConnectionTests-Info.plist"; sourceTree = "<group>"; };
+		BE45C6C714E8170700F8DD20 /* MockNSURLConnectionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MockNSURLConnectionTests-Info.plist"; sourceTree = "<group>"; };
 		BE45C6C914E8170700F8DD20 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BE45C6CB14E8170700F8DD20 /* MockNSURLConnectionTests.h */ = {isa = PBXFileReference; path = MockNSURLConnectionTests.h; sourceTree = "<group>"; };
+		BE45C6CB14E8170700F8DD20 /* MockNSURLConnectionTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockNSURLConnectionTests.h; sourceTree = "<group>"; };
 		BE45C6CC14E8170700F8DD20 /* MockNSURLConnectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockNSURLConnectionTests.m; sourceTree = "<group>"; };
+		BE45C6D614E819A600F8DD20 /* MockNSHTTPURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockNSHTTPURLResponse.h; sourceTree = "<group>"; };
+		BE45C6D714E819A600F8DD20 /* MockNSHTTPURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockNSHTTPURLResponse.m; sourceTree = "<group>"; };
+		BE45C6DC14E89E0C00F8DD20 /* TestConnectionDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestConnectionDelegate.h; sourceTree = "<group>"; };
+		BE45C6DD14E89E0C00F8DD20 /* TestConnectionDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestConnectionDelegate.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +108,8 @@
 			children = (
 				BE45C6B414E8170700F8DD20 /* MockNSURLConnection.h */,
 				BE45C6B514E8170700F8DD20 /* MockNSURLConnection.m */,
+				BE45C6D614E819A600F8DD20 /* MockNSHTTPURLResponse.h */,
+				BE45C6D714E819A600F8DD20 /* MockNSHTTPURLResponse.m */,
 				BE45C6B214E8170700F8DD20 /* Supporting Files */,
 			);
 			path = MockNSURLConnection;
@@ -117,6 +128,8 @@
 			children = (
 				BE45C6CB14E8170700F8DD20 /* MockNSURLConnectionTests.h */,
 				BE45C6CC14E8170700F8DD20 /* MockNSURLConnectionTests.m */,
+				BE45C6DC14E89E0C00F8DD20 /* TestConnectionDelegate.h */,
+				BE45C6DD14E89E0C00F8DD20 /* TestConnectionDelegate.m */,
 				BE45C6C614E8170700F8DD20 /* Supporting Files */,
 			);
 			path = MockNSURLConnectionTests;
@@ -138,6 +151,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE45C6D814E819A600F8DD20 /* MockNSHTTPURLResponse.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE45C6B614E8170700F8DD20 /* MockNSURLConnection.m in Sources */,
+				BE45C6D914E819A600F8DD20 /* MockNSHTTPURLResponse.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +262,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE45C6CD14E8170700F8DD20 /* MockNSURLConnectionTests.m in Sources */,
+				BE45C6DA14E89D8900F8DD20 /* MockNSURLConnection.m in Sources */,
+				BE45C6DB14E89D8C00F8DD20 /* MockNSHTTPURLResponse.m in Sources */,
+				BE45C6DE14E89E0C00F8DD20 /* TestConnectionDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

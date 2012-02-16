@@ -25,7 +25,6 @@
 
 @end
 
-static IMP g_realSelfAlloc = NULL;
 static IMP g_originalConnAlloc = NULL;
 static NSMutableDictionary *g_stubResponses = nil; // URL -> StubResponse
 
@@ -56,9 +55,6 @@ static NSMutableDictionary *g_stubResponses = nil; // URL -> StubResponse
     SEL allocSel = @selector(alloc);
     Method superMethod = class_getClassMethod(klass, allocSel);
     g_originalConnAlloc = method_getImplementation(superMethod);
-    
-    Method selfActualMethod = class_getClassMethod(self, allocSel);
-    g_realSelfAlloc = method_getImplementation(selfActualMethod);
     
     Method selfSwizzledMethod = class_getClassMethod(self, @selector(superAlloc));
     IMP selfSwizzledAlloc = method_getImplementation(selfSwizzledMethod);

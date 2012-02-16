@@ -29,7 +29,7 @@ MockNSURLConnection mocks web requests to aid unit testing in ObjC projects. It 
                                      body:@"woo"
                                    forURL:@"http://foo.bar/baz"];
   
-  // so on and so forth
+  // so on and so forth, call your code/NSURLConnection like normal
 }
 
 @end

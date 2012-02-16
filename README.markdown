@@ -1,6 +1,6 @@
 # MockNSURLConnection
 
-MockNSURLConnection mocks web requests to aid unit testing in ObjC projects. It works by swizzling instances of `MockNSURLConnection` in for instances of `NSURLConnection` whenever an `+[NSURLConnection alloc]` message is sent. In other words, this is a hack, and likely to be delicate (I've already found it can confuse ARC in some cases). Also, that means it *only* correctly works with code that relies on `NSURLConnection`: code that uses `CFNetwork` will be unaffected.
+MockNSURLConnection mocks web requests to aid unit testing in ObjC projects. It works by swizzling instances of `MockNSURLConnection` in for instances of `NSURLConnection` whenever an `+[NSURLConnection alloc]` message is sent. In other words, this is a hack, but a useful one. Also, that means it *only* correctly works with code that relies on `NSURLConnection`: code that uses `CFNetwork` will be unaffected.
 
 ## Use
 

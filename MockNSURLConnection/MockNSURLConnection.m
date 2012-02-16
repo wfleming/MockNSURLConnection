@@ -12,6 +12,12 @@
 
 @implementation UnexpectedStubURLRequestException
 
+- (id) initWithURL:(NSString*)url {
+  return [super initWithName:NSStringFromClass([self class])
+                      reason:[NSString stringWithFormat:@"No stub request found for URL %@", url]
+                    userInfo:nil];
+}
+
 + (void) raiseForURL:(NSString*)url {
   [super raise:NSStringFromClass(self)
         format:@"No stub request found for URL %@", url];
@@ -31,7 +37,7 @@ static NSMutableDictionary *g_stubResponses = nil; // URL -> StubResponse
 
 #pragma mark - our methods
 
-+ (id) superAlloc {
++ (id) superAlloc __attribute((ns_returns_retained)) {
   if ([NSURLConnection class] == self) {
     return [MockNSURLConnection alloc];
   } else {
@@ -146,7 +152,10 @@ static NSMutableDictionary *g_stubResponses = nil; // URL -> StubResponse
   MockNSHTTPURLResponse *r = [g_stubResponses objectForKey:[self.currentRequest.URL absoluteString]];
   
   if (nil == r) {
-    [UnexpectedStubURLRequestException raiseForURL:[_request.URL absoluteString]];
+//    [UnexpectedStubURLRequestException raiseForURL:[_request.URL absoluteString]];
+    // ARC does not like the +raise methods - it overreleases. oh well.
+    UnexpectedStubURLRequestException *e = [[UnexpectedStubURLRequestException alloc] initWithURL:[_request.URL absoluteString]];
+    [e raise];
   }
   
   [_delegate connection:(NSURLConnection*)self didReceiveResponse:(NSURLResponse*)r];

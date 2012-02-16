@@ -46,10 +46,7 @@
   url = nil;
   delegate = nil;
   
-  // conn seems to be having some odd issue with ARC:
-  // when test local, it always zombies before ARC thinks it's been dealloced.
-  // can't nil it out explicitly here either, or the same happens.
-  // not sure...haven't seen anything like this with earlier tests in use.
+  conn = nil;
   
   [super tearDown];
 }

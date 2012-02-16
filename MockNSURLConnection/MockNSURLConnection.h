@@ -11,6 +11,8 @@
 
 @interface UnexpectedStubURLRequestException : NSException
 
+
+- (id) initWithURL:(NSString*)url;
 + (void) raiseForURL:(NSString*)url;
 
 @end

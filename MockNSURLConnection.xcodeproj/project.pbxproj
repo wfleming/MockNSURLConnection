@@ -366,6 +366,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MockNSURLConnection/MockNSURLConnection-Prefix.pch";
 				INFOPLIST_FILE = "MockNSURLConnectionTests/MockNSURLConnectionTests-Info.plist";
+				OTHER_CFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -381,6 +382,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MockNSURLConnection/MockNSURLConnection-Prefix.pch";
 				INFOPLIST_FILE = "MockNSURLConnectionTests/MockNSURLConnectionTests-Info.plist";
+				OTHER_CFLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = octest;
 			};
@@ -405,6 +407,7 @@
 				BE45C6D214E8170700F8DD20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE45C6D314E8170700F8DD20 /* Build configuration list for PBXNativeTarget "MockNSURLConnectionTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +416,7 @@
 				BE45C6D514E8170700F8DD20 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

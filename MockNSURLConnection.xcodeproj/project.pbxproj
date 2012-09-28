@@ -6,13 +6,36 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		B82738601617712600E70C72 /* MockNSURLConnection-iOS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B82738611617712600E70C72 /* Build configuration list for PBXAggregateTarget "MockNSURLConnection-iOS" */;
+			buildPhases = (
+				B82738641617715A00E70C72 /* Build architecture-specific static libs */,
+				B8273865161771B700E70C72 /* Build universal static lib */,
+				B8273866161771D900E70C72 /* CopyFiles */,
+			);
+			dependencies = (
+			);
+			name = "MockNSURLConnection-iOS";
+			productName = "MockNSURLConnection-iOS";
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
+		B8273867161771ED00E70C72 /* MockNSURLConnection.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BE45C6B414E8170700F8DD20 /* MockNSURLConnection.h */; };
+		B8273868161771ED00E70C72 /* MockNSHTTPURLResponse.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BE45C6D614E819A600F8DD20 /* MockNSHTTPURLResponse.h */; };
+		B82738A9161772B800E70C72 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B82738A8161772B800E70C72 /* Cocoa.framework */; };
+		B82738BC161772D100E70C72 /* MockNSURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = BE45C6B514E8170700F8DD20 /* MockNSURLConnection.m */; };
+		B82738BD161772D100E70C72 /* MockNSHTTPURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BE45C6D714E819A600F8DD20 /* MockNSHTTPURLResponse.m */; };
+		B82738BE161772D800E70C72 /* MockNSURLConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = BE45C6B414E8170700F8DD20 /* MockNSURLConnection.h */; };
+		B82738BF161772D800E70C72 /* MockNSHTTPURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = BE45C6D614E819A600F8DD20 /* MockNSHTTPURLResponse.h */; };
 		BE45C6B014E8170700F8DD20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE45C6AF14E8170700F8DD20 /* Foundation.framework */; };
 		BE45C6B614E8170700F8DD20 /* MockNSURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = BE45C6B514E8170700F8DD20 /* MockNSURLConnection.m */; };
 		BE45C6BE14E8170700F8DD20 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE45C6BD14E8170700F8DD20 /* SenTestingKit.framework */; };
 		BE45C6C014E8170700F8DD20 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE45C6BF14E8170700F8DD20 /* UIKit.framework */; };
 		BE45C6C114E8170700F8DD20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE45C6AF14E8170700F8DD20 /* Foundation.framework */; };
-		BE45C6C414E8170700F8DD20 /* libMockNSURLConnection.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE45C6AC14E8170700F8DD20 /* libMockNSURLConnection.a */; };
+		BE45C6C414E8170700F8DD20 /* libMockNSURLConnection-StaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE45C6AC14E8170700F8DD20 /* libMockNSURLConnection-StaticLib.a */; };
 		BE45C6CA14E8170700F8DD20 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BE45C6C814E8170700F8DD20 /* InfoPlist.strings */; };
 		BE45C6CD14E8170700F8DD20 /* MockNSURLConnectionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BE45C6CC14E8170700F8DD20 /* MockNSURLConnectionTests.m */; };
 		BE45C6D814E819A600F8DD20 /* MockNSHTTPURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = BE45C6D614E819A600F8DD20 /* MockNSHTTPURLResponse.h */; };
@@ -32,8 +55,27 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		B8273866161771D900E70C72 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal/${PRODUCT_NAME}.framework/Headers";
+			dstSubfolderSpec = 0;
+			files = (
+				B8273867161771ED00E70C72 /* MockNSURLConnection.h in CopyFiles */,
+				B8273868161771ED00E70C72 /* MockNSHTTPURLResponse.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		BE45C6AC14E8170700F8DD20 /* libMockNSURLConnection.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMockNSURLConnection.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		B82738A7161772B800E70C72 /* MockNSURLConnection-OSX.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "MockNSURLConnection-OSX.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B82738A8161772B800E70C72 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		B82738AB161772B800E70C72 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		B82738AC161772B800E70C72 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		B82738AD161772B800E70C72 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BE45C6AC14E8170700F8DD20 /* libMockNSURLConnection-StaticLib.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libMockNSURLConnection-StaticLib.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE45C6AF14E8170700F8DD20 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		BE45C6B314E8170700F8DD20 /* MockNSURLConnection-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MockNSURLConnection-Prefix.pch"; sourceTree = "<group>"; };
 		BE45C6B414E8170700F8DD20 /* MockNSURLConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockNSURLConnection.h; sourceTree = "<group>"; };
@@ -43,7 +85,6 @@
 		BE45C6BF14E8170700F8DD20 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		BE45C6C714E8170700F8DD20 /* MockNSURLConnectionTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MockNSURLConnectionTests-Info.plist"; sourceTree = "<group>"; };
 		BE45C6C914E8170700F8DD20 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		BE45C6CB14E8170700F8DD20 /* MockNSURLConnectionTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MockNSURLConnectionTests.h; sourceTree = "<group>"; };
 		BE45C6CC14E8170700F8DD20 /* MockNSURLConnectionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MockNSURLConnectionTests.m; sourceTree = "<group>"; };
 		BE45C6D614E819A600F8DD20 /* MockNSHTTPURLResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MockNSHTTPURLResponse.h; sourceTree = "<group>"; };
 		BE45C6D714E819A600F8DD20 /* MockNSHTTPURLResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MockNSHTTPURLResponse.m; sourceTree = "<group>"; };
@@ -52,6 +93,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B82738A3161772B800E70C72 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B82738A9161772B800E70C72 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BE45C6A914E8170700F8DD20 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -67,13 +116,23 @@
 				BE45C6BE14E8170700F8DD20 /* SenTestingKit.framework in Frameworks */,
 				BE45C6C014E8170700F8DD20 /* UIKit.framework in Frameworks */,
 				BE45C6C114E8170700F8DD20 /* Foundation.framework in Frameworks */,
-				BE45C6C414E8170700F8DD20 /* libMockNSURLConnection.a in Frameworks */,
+				BE45C6C414E8170700F8DD20 /* libMockNSURLConnection-StaticLib.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B82738AA161772B800E70C72 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B82738AB161772B800E70C72 /* AppKit.framework */,
+				B82738AC161772B800E70C72 /* CoreData.framework */,
+				B82738AD161772B800E70C72 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
 		BE45C6A114E8170600F8DD20 = {
 			isa = PBXGroup;
 			children = (
@@ -87,8 +146,9 @@
 		BE45C6AD14E8170700F8DD20 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BE45C6AC14E8170700F8DD20 /* libMockNSURLConnection.a */,
+				BE45C6AC14E8170700F8DD20 /* libMockNSURLConnection-StaticLib.a */,
 				BE45C6BC14E8170700F8DD20 /* MockNSURLConnectionTests.octest */,
+				B82738A7161772B800E70C72 /* MockNSURLConnection-OSX.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,6 +159,8 @@
 				BE45C6AF14E8170700F8DD20 /* Foundation.framework */,
 				BE45C6BD14E8170700F8DD20 /* SenTestingKit.framework */,
 				BE45C6BF14E8170700F8DD20 /* UIKit.framework */,
+				B82738A8161772B800E70C72 /* Cocoa.framework */,
+				B82738AA161772B800E70C72 /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -126,7 +188,6 @@
 		BE45C6C514E8170700F8DD20 /* MockNSURLConnectionTests */ = {
 			isa = PBXGroup;
 			children = (
-				BE45C6CB14E8170700F8DD20 /* MockNSURLConnectionTests.h */,
 				BE45C6CC14E8170700F8DD20 /* MockNSURLConnectionTests.m */,
 				BE45C6DC14E89E0C00F8DD20 /* TestConnectionDelegate.h */,
 				BE45C6DD14E89E0C00F8DD20 /* TestConnectionDelegate.m */,
@@ -147,6 +208,15 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		B82738A4161772B800E70C72 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B82738BE161772D800E70C72 /* MockNSURLConnection.h in Headers */,
+				B82738BF161772D800E70C72 /* MockNSHTTPURLResponse.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BE45C6AA14E8170700F8DD20 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -158,9 +228,27 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		BE45C6AB14E8170700F8DD20 /* MockNSURLConnection */ = {
+		B82738A6161772B800E70C72 /* MockNSURLConnection-OSX */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BE45C6D014E8170700F8DD20 /* Build configuration list for PBXNativeTarget "MockNSURLConnection" */;
+			buildConfigurationList = B82738BA161772B900E70C72 /* Build configuration list for PBXNativeTarget "MockNSURLConnection-OSX" */;
+			buildPhases = (
+				B82738A2161772B800E70C72 /* Sources */,
+				B82738A3161772B800E70C72 /* Frameworks */,
+				B82738A4161772B800E70C72 /* Headers */,
+				B82738A5161772B800E70C72 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "MockNSURLConnection-OSX";
+			productName = "MockNSURLConnection-OSX";
+			productReference = B82738A7161772B800E70C72 /* MockNSURLConnection-OSX.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BE45C6AB14E8170700F8DD20 /* MockNSURLConnection-StaticLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE45C6D014E8170700F8DD20 /* Build configuration list for PBXNativeTarget "MockNSURLConnection-StaticLib" */;
 			buildPhases = (
 				BE45C6A814E8170700F8DD20 /* Sources */,
 				BE45C6A914E8170700F8DD20 /* Frameworks */,
@@ -170,9 +258,9 @@
 			);
 			dependencies = (
 			);
-			name = MockNSURLConnection;
+			name = "MockNSURLConnection-StaticLib";
 			productName = MockNSURLConnection;
-			productReference = BE45C6AC14E8170700F8DD20 /* libMockNSURLConnection.a */;
+			productReference = BE45C6AC14E8170700F8DD20 /* libMockNSURLConnection-StaticLib.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		BE45C6BB14E8170700F8DD20 /* MockNSURLConnectionTests */ = {
@@ -214,13 +302,22 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BE45C6AB14E8170700F8DD20 /* MockNSURLConnection */,
+				BE45C6AB14E8170700F8DD20 /* MockNSURLConnection-StaticLib */,
 				BE45C6BB14E8170700F8DD20 /* MockNSURLConnectionTests */,
+				B82738601617712600E70C72 /* MockNSURLConnection-iOS */,
+				B82738A6161772B800E70C72 /* MockNSURLConnection-OSX */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B82738A5161772B800E70C72 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BE45C6B914E8170700F8DD20 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +329,34 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		B82738641617715A00E70C72 /* Build architecture-specific static libs */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build architecture-specific static libs";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "xcodebuild -project ${PROJECT_NAME}.xcodeproj -sdk iphonesimulator -target ${PROJECT_NAME}-StaticLib -configuration ${CONFIGURATION} -arch i386 clean build SYMROOT=${SYMROOT}\nxcodebuild -project ${PROJECT_NAME}.xcodeproj -sdk iphoneos -target ${PROJECT_NAME}-StaticLib -configuration ${CONFIGURATION} -arch armv7 clean build SYMROOT=${SYMROOT}";
+		};
+		B8273865161771B700E70C72 /* Build universal static lib */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build universal static lib";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SIMULATOR_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphonesimulator/lib${PROJECT_NAME}-StaticLib.a\" &&\nDEVICE_LIBRARY_PATH=\"${BUILD_DIR}/${CONFIGURATION}-iphoneos/lib${PROJECT_NAME}-StaticLib.a\" &&\nUNIVERSAL_LIBRARY_DIR=\"${BUILD_DIR}/${CONFIGURATION}-iphoneuniversal\" &&\nUNIVERSAL_LIBRARY_PATH=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}\" &&\nFRAMEWORK=\"${UNIVERSAL_LIBRARY_DIR}/${PRODUCT_NAME}.framework\" &&\n\n# Create framework directory structure.\nrm -rf \"${FRAMEWORK}\" &&\nmkdir -p \"${UNIVERSAL_LIBRARY_DIR}\" &&\nmkdir -p \"${FRAMEWORK}/Versions/A/Headers\" &&\nmkdir -p \"${FRAMEWORK}/Versions/A/Resources\" &&\n\n# Generate universal binary from desktop, device, and simulator builds.\nlipo \"${SIMULATOR_LIBRARY_PATH}\" \"${DEVICE_LIBRARY_PATH}\" -create -output \"${UNIVERSAL_LIBRARY_PATH}\" &&\n\n# Move files to appropriate locations in framework paths.\ncp \"${UNIVERSAL_LIBRARY_PATH}\" \"${FRAMEWORK}/Versions/A\" &&\ncd \"${FRAMEWORK}/Versions\" &&\nln -s \"A\" \"Current\" &&\ncd \"${FRAMEWORK}\" &&\nln -s \"Versions/Current/Headers\" \"Headers\" &&\nln -s \"Versions/Current/Resources\" \"Resources\" &&\nln -s \"Versions/Current/${PRODUCT_NAME}\" \"${PRODUCT_NAME}\"";
+		};
 		BE45C6BA14E8170700F8DD20 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -248,6 +373,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B82738A2161772B800E70C72 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B82738BC161772D100E70C72 /* MockNSURLConnection.m in Sources */,
+				B82738BD161772D100E70C72 /* MockNSHTTPURLResponse.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BE45C6A814E8170700F8DD20 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -273,7 +407,7 @@
 /* Begin PBXTargetDependency section */
 		BE45C6C314E8170700F8DD20 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BE45C6AB14E8170700F8DD20 /* MockNSURLConnection */;
+			target = BE45C6AB14E8170700F8DD20 /* MockNSURLConnection-StaticLib */;
 			targetProxy = BE45C6C214E8170700F8DD20 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -290,6 +424,82 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B82738621617712600E70C72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = "";
+			};
+			name = Debug;
+		};
+		B82738631617712600E70C72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = "";
+			};
+			name = Release;
+		};
+		B82738B8161772B900E70C72 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MockNSURLConnection/MockNSURLConnection-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Debug;
+		};
+		B82738B9161772B900E70C72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				FRAMEWORK_VERSION = A;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "MockNSURLConnection/MockNSURLConnection-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = framework;
+			};
+			name = Release;
+		};
 		BE45C6CE14E8170700F8DD20 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -391,6 +601,23 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B82738611617712600E70C72 /* Build configuration list for PBXAggregateTarget "MockNSURLConnection-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B82738621617712600E70C72 /* Debug */,
+				B82738631617712600E70C72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B82738BA161772B900E70C72 /* Build configuration list for PBXNativeTarget "MockNSURLConnection-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B82738B8161772B900E70C72 /* Debug */,
+				B82738B9161772B900E70C72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		BE45C6A614E8170600F8DD20 /* Build configuration list for PBXProject "MockNSURLConnection" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -400,7 +627,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BE45C6D014E8170700F8DD20 /* Build configuration list for PBXNativeTarget "MockNSURLConnection" */ = {
+		BE45C6D014E8170700F8DD20 /* Build configuration list for PBXNativeTarget "MockNSURLConnection-StaticLib" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE45C6D114E8170700F8DD20 /* Debug */,

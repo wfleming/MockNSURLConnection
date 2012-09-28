@@ -6,7 +6,7 @@
 //
 
 #import "MockNSURLConnection.h"
-
+#import "MockNSHTTPURLResponse.h"
 #import <objc/runtime.h>
 #import <objc/message.h>
 

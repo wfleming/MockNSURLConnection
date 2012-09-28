@@ -3,5 +3,24 @@
 //
 
 #ifdef __OBJC__
-  #import <Foundation/Foundation.h>
+
+#ifdef TARGET_OS_IPHONE
+
+#import <Foundation/Foundation.h>
+
+#elif defined TARGET_IPHONE_SIMULATOR
+
+#import <Foundation/Foundation.h>
+
+#elif defined TARGET_OS_MAC
+
+#import <Cocoa/Cocoa.h>
+
+#else
+
 #endif
+
+#endif
+
+
+

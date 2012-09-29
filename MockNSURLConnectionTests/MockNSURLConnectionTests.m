@@ -6,10 +6,13 @@
 //  Copyright (c) 2012. All rights reserved.
 //
 
-#import "MockNSURLConnectionTests.h"
-
+#import <SenTestingKit/SenTestingKit.h>
 #import "MockNSURLConnection.h"
+#import "MockNSHTTPURLResponse.h"
 #import "TestConnectionDelegate.h"
+
+@interface MockNSURLConnectionTests : SenTestCase
+@end
 
 @implementation MockNSURLConnectionTests {
   TestConnectionDelegate *delegate;

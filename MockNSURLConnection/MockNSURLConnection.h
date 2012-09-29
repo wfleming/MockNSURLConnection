@@ -6,8 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
-
 #import "MockNSHTTPURLResponse.h"
+
 
 @interface UnexpectedStubURLRequestException : NSException
 

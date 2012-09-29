@@ -28,8 +28,8 @@
 		B82738A9161772B800E70C72 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B82738A8161772B800E70C72 /* Cocoa.framework */; };
 		B82738BC161772D100E70C72 /* MockNSURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = BE45C6B514E8170700F8DD20 /* MockNSURLConnection.m */; };
 		B82738BD161772D100E70C72 /* MockNSHTTPURLResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = BE45C6D714E819A600F8DD20 /* MockNSHTTPURLResponse.m */; };
-		B82738BE161772D800E70C72 /* MockNSURLConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = BE45C6B414E8170700F8DD20 /* MockNSURLConnection.h */; };
-		B82738BF161772D800E70C72 /* MockNSHTTPURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = BE45C6D614E819A600F8DD20 /* MockNSHTTPURLResponse.h */; };
+		B82738BE161772D800E70C72 /* MockNSURLConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = BE45C6B414E8170700F8DD20 /* MockNSURLConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B854C75B161783F300F4334B /* MockNSHTTPURLResponse.h in Headers */ = {isa = PBXBuildFile; fileRef = BE45C6D614E819A600F8DD20 /* MockNSHTTPURLResponse.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BE45C6B014E8170700F8DD20 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE45C6AF14E8170700F8DD20 /* Foundation.framework */; };
 		BE45C6B614E8170700F8DD20 /* MockNSURLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = BE45C6B514E8170700F8DD20 /* MockNSURLConnection.m */; };
 		BE45C6BE14E8170700F8DD20 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE45C6BD14E8170700F8DD20 /* SenTestingKit.framework */; };
@@ -213,7 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B82738BE161772D800E70C72 /* MockNSURLConnection.h in Headers */,
-				B82738BF161772D800E70C72 /* MockNSHTTPURLResponse.h in Headers */,
+				B854C75B161783F300F4334B /* MockNSHTTPURLResponse.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,6 +617,7 @@
 				B82738B9161772B900E70C72 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BE45C6A614E8170600F8DD20 /* Build configuration list for PBXProject "MockNSURLConnection" */ = {
 			isa = XCConfigurationList;

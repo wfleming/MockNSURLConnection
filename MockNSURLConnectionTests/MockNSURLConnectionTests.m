@@ -152,4 +152,14 @@
   STAssertTrue([conn class] == [NSURLConnection class], nil);
 }
 
+- (void) testSavesLastRequestDataForURL {
+  request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
+  NSData *requestData = [@"test request body" dataUsingEncoding:NSUTF8StringEncoding];
+  [(NSMutableURLRequest *)request setHTTPBody:requestData];
+
+  [self test_StubResponse_forURL];
+
+  STAssertEquals([MockNSURLConnection lastMatchedRequestDataForURL:url], requestData, @"Request body wasn't saved");
+}
+
 @end

@@ -47,6 +47,10 @@
 + (void) stubResponseStatus:(NSInteger)statusCode body:(NSString*)body forURL:(NSString*)requestURL;
 + (void) stubResponseStatus:(NSInteger)statusCode bodyData:(NSData*)body forURL:(NSString*)requestURL;
 
+/**
+ * returns the data of the last matched URL request with the given URL
+ */
++ (NSData *) lastMatchedRequestDataForURL:(NSString *)requestURL;
 
 #pragma mark - NSURLConnection public interface
 

@@ -27,6 +27,7 @@
 
 static IMP g_originalConnAlloc = NULL;
 static NSMutableDictionary *g_stubResponses = nil; // URL -> StubResponse
+static NSMutableDictionary *g_matchedRequestDatas = nil; // URL -> Request Data
 
 #pragma mark -
 @implementation MockNSURLConnection {
@@ -48,6 +49,7 @@ static NSMutableDictionary *g_stubResponses = nil; // URL -> StubResponse
 + (void) beginStubbing {
   if (nil == g_stubResponses) {
     g_stubResponses = [NSMutableDictionary dictionary];
+    g_matchedRequestDatas = [NSMutableDictionary dictionary];
   }
   
   if (NULL == g_originalConnAlloc) {
@@ -87,6 +89,7 @@ static NSMutableDictionary *g_stubResponses = nil; // URL -> StubResponse
 
 + (void) stopStubbing {
   g_stubResponses = nil;
+  g_matchedRequestDatas = nil;
   
   Class parentKlass = [NSURLConnection class];
   SEL allocSel = @selector(alloc);
@@ -112,8 +115,13 @@ static NSMutableDictionary *g_stubResponses = nil; // URL -> StubResponse
   [self stubResponse:r forURL:requestURL];
 }
 
++ (NSData *)lastMatchedRequestDataForURL:(NSString *)requestURL {
+  return [g_matchedRequestDatas objectForKey:requestURL];
+}
+
 
 #pragma mark - NSURLConnection public overrides
+
 - (id)initWithRequest:(NSURLRequest *)request delegate:(id)delegate startImmediately:(BOOL)startImmediately {
   _request = request;
   _delegate = delegate;
@@ -145,15 +153,21 @@ static NSMutableDictionary *g_stubResponses = nil; // URL -> StubResponse
 }
 
 - (void)start {
-  MockNSHTTPURLResponse *r = [g_stubResponses objectForKey:[self.currentRequest.URL absoluteString]];
-  
+  NSString *URL = [self.currentRequest.URL absoluteString];
+  MockNSHTTPURLResponse *r = [g_stubResponses objectForKey:URL];
+
   if (nil == r) {
 //    [UnexpectedStubURLRequestException raiseForURL:[_request.URL absoluteString]];
     // ARC does not like the +raise methods - it overreleases. oh well.
     UnexpectedStubURLRequestException *e = [[UnexpectedStubURLRequestException alloc] initWithURL:[_request.URL absoluteString]];
     [e raise];
   }
-  
+
+  NSData *requestData = self.currentRequest.HTTPBody;
+  if (requestData != nil) {
+    [g_matchedRequestDatas setObject:requestData forKey:URL];
+  }
+
   [_delegate connection:(NSURLConnection*)self didReceiveResponse:(NSURLResponse*)r];
   [_delegate connection:(NSURLConnection*)self didReceiveData:[r HTTPBody]];
   [_delegate connectionDidFinishLoading:(NSURLConnection*)self];
